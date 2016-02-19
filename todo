@@ -1,0 +1,12 @@
+Welcome, this is the official repository for werewolf online a clone of the game called "werewolf" and sometimes "mafia"
+For more details about the game you can find a lot on wikipedia:
+https://en.wikipedia.org/wiki/Mafia_%28party_game%29
+Our goal here, is to make an online version usable on both our phones and computers.
+* TODO
+** Tools
+*** Serverside
+  - [-] Ruby
+    [-] NodeJS
+*** Phone app
+   - [-] Rubymotion
+     [-] Phonegap
