@@ -6,7 +6,49 @@ Our goal here, is to make an online version usable on both our phones and comput
 ** Tools
 *** Serverside
   - [-] Ruby
-    [-] NodeJS
+  - [X] NodeJS
 *** Phone app
    - [-] Rubymotion
-     [-] Phonegap
+   - [X] Phonegap
+** Objects
+*** Player
+**** Functions:
+     - player.add('name', 'req.connection.remoteAddress')
+        Add a player to the game, define its ID and store its IP address to test if there's already one
+     - player.delete('ID')
+        Delete a player from the game and flush the data concerning him/her
+     - player.join('room.id')
+        Add a player to a room (player.room = 'room.id' and if room is not full then room.players += player.id )
+     - player.SetQuiet('this.id', 'this.isQuiet', 'amount of time - optional') 
+        set the player's right to talk for an optional amount of time
+     - player.setRights('this.id', 'this.rights')
+        set the player rights giving the ability to change the room's cards and to quiet and kick people
+**** Voting
+   
+*** Room
+*** Game     
+** Plan
+Here is what we expect to have:
+
+   - Connection
+   - player.add
+   - room.create
+   - room.chat.enabled =1
+   - room.changeCards
+   - Game.begin
+     - room.chat.enbaled =0
+     - iteration
+       - Cupidon
+       - Loups
+       - Voyante
+       - Sorcière
+     - winning test
+     - room.chat.enabled=1
+     - player.vote
+     - room.vote
+     - player.vote.flush
+     - winning tests if(1){Game.end}
+       else{Game.begin}
+
+This is a brief version taking some shortcuts, we may code the complete game at once without showing the obvious uses of room.chat.infoToAll or room.chat.infoToClass.
+But we'll add the complete wiaitng process when we'll have defined the rest.
